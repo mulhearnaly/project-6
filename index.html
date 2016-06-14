@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<!-- Tested in Chrome, IE and Safari -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Video</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <div class="video-container">
+        <!--  Video -->
+        <video id="video">
+          <source src="videos/video.mp4" type="video/mp4">
+          <source src="videos/video.ogg" type="video/ogg">
+          
+          <track label="English" kind="subtitles" srclang="en" src="videos/captions.vtt">
+        
+        </video>
+        
+        <!--  Video Controls -->
+        <div class="video-controls">
+          <progress id="seek-bar" max="100" value="0"></progress>
+          <div class="control-buttons">
+            <button type="button" id="play-pause">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
+            <div id="time">00:00 / 00:00</div>
+            <div class="f-right">
+              <button type="button" id="volume">
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+              </button>
+              <button type="button" id="full-screen">
+              <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+              </button>
+            </div><!-- Close .f-right -->  
+          </div>
+        </div><!-- Close .video-control -->
+      </div><!-- Close .video-container -->
+      <!--  Captions -->
+      <div class="captions">
+      <p>
+        <span id="cap1">Now that we've looked at the architecture
+  of the internet, let's see how you might</span>
+        <span id="cap2">connect your personal devices to
+  the internet inside your house.</span>
+        <span id="cap3">Well there are many ways to connect to the internet, and</span>
+        <span id="cap4">most often people connect wirelessly.</span>
+      </p>
+      <p>
+        <span id="cap5">Let's look at an example of how
+you can connect to the internet.</span>
+        <span id="cap6">If you live in a city or a town,
+  you probably have a coaxial cable for</span>
+        <span id="cap7">cable Internet, or a phone line if you have DSL, running to the outside of</span>
+        <span id="cap8">your house, that connects you to the Internet Service Provider, or ISP.</span>
+      </p>
+      <p>
+        <span id="cap9">If you live far out in the country, you'll more likely have</span>
+        <span id="cap10">a dish outside your house, connecting you wirelessly to your closest ISP, or</span>
+        <span id="cap11">you might also use the telephone system.</span>
+      </p>
+      <p>
+        <span id="cap12">Whether a wire comes straight from the ISP hookup outside your house, or</span>
+        <span id="cap13">it travels over radio waves from your roof,</span>
+        <span id="cap14">the first stop a wire will make once inside your house, is at your modem.</span>
+        <span id="cap15">A modem is what connects the internet to your network at home.</span>
+        <span id="cap16">A few common residential modems are DSL or</span></p>
+      </div>
+    
+    </div>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/captions.js"></script>
+  </body>
